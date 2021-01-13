@@ -59,9 +59,7 @@ while True:
     layerNames = net.getLayerNames()
     outputNames = [layerNames[i[0]-1] for i in net.getUnconnectedOutLayers()]
     outputs = net.forward(outputNames)
-    # print(outputs[0].shape)
-    # print(outputs[1].shape)
-    # print(outputs[2].shape)
+    
     findObjects(outputs,img)
 
     cv2.imshow('Image', img)
